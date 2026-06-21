@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>給付付き税額控除研究会｜研究会のご案内</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    background: #f4f2ee;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  a { color: #2f5440; text-decoration: underline; }
+  a:hover { color: #ab8a52; }
+
+  /* ── ヘッダー ── */
+  .site-header {
+    background: #2f5440;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 2rem;
+    border-bottom: 3px solid #ab8a52;
+  }
+
+  .site-header .site-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+  }
+
+  .site-header .home-link {
+    font-size: 0.85rem;
+  }
+
+  .site-header .home-link a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .site-header .home-link a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── タブナビ ── */
+  .tab-nav {
+    background: #fff;
+    border-bottom: 3px solid #2f5440;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .tab-nav a {
+    display: block;
+    padding: 0.9rem 1.6rem;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.92rem;
+    border-right: 1px solid #e0ddd6;
+  }
+
+  .tab-nav a:hover {
+    background: #f4f2ee;
+  }
+
+  .tab-nav a.active {
+    background: #2f5440;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  /* ── レイアウト ── */
+  .page-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .page-heading {
+    font-size: 1.5rem;
+    color: #222;
+    border-bottom: 3px solid #d4b876;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-box {
+    background: #fff;
+    border: 1px solid #e0ddd6;
+    margin-bottom: 1.8rem;
+  }
+
+  .content-box .box-header {
+    background: #eaf0e8;
+    color: #444;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+    border-bottom: 1px solid #e0ddd6;
+  }
+
+  .content-box .box-body {
+    padding: 1.5rem 1.5rem 1.8rem;
+  }
+
+  .event-title {
+    font-size: 1.1rem;
+    color: #ab8a52;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+  }
+
+  .field {
+    margin-bottom: 1rem;
+  }
+
+  .field .diamond {
+    color: #4d7a5e;
+    font-weight: bold;
+  }
+
+  .field .field-label {
+    font-weight: bold;
+    color: #222;
+  }
+
+  .field .sub {
+    padding-left: 1.6em;
+    margin-top: 0.3rem;
+  }
+
+  .field .sub2 {
+    padding-left: 3em;
+    margin-top: 0.2rem;
+  }
+
+  .note-asterisk {
+    color: #ab8a52;
+    font-size: 0.88rem;
+  }
+
+  .deadline {
+    font-weight: bold;
+    color: #ab8a52;
+  }
+
+  section.anchor-section {
+    margin-bottom: 1.8rem;
+  }
+
+  .background-box .box-body p {
+    margin-bottom: 1rem;
+  }
+
+  .background-box blockquote {
+    font-size: 0.92rem;
+    margin: 0.8rem 0 1.2rem 0.5em;
+    padding-left: 1rem;
+    border-left: 3px solid #ddd9cd;
+    color: #444;
+  }
+
+  .organizers-box .box-body {
+    text-align: right;
+    color: #555;
+    font-size: 0.92rem;
+    line-height: 1.9;
+  }
+
+  /* ── サイドバー ── */
+  aside {
+    width: 250px;
+    flex-shrink: 0;
+  }
+
+  .side-box {
+    border: 1px solid #e0ddd6;
+    background: #fff;
+    margin-bottom: 1.2rem;
+  }
+
+  .side-box ul {
+    list-style: none;
+  }
+
+  .side-box li {
+    border-bottom: 1px solid #efece4;
+  }
+
+  .side-box li:last-child { border-bottom: none; }
+
+  .side-box a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .side-box a:hover {
+    background: #eaf0e8;
+    color: #2f5440;
+  }
+
+  .side-box a::before {
+    content: "▸ ";
+    color: #ab8a52;
+  }
+
+  .side-highlight {
+    background: #f7f1e3;
+    border: 1px solid #d4b876;
+    padding: 1rem 1.1rem;
+    font-size: 0.88rem;
+    color: #555;
+  }
+
+  .side-highlight strong {
+    display: block;
+    color: #ab8a52;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  /* ── フッター ── */
+  footer {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #888;
+    padding: 1.5rem;
+    border-top: 1px solid #e0ddd6;
+  }
+
+  @media (max-width: 720px) {
+    .page-wrap { flex-direction: column; }
+    aside { width: 100%; }
+    .tab-nav { flex-wrap: wrap; }
+  }
+
+  /* ── トップへ戻るボタン ── */
+  #back-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #2f5440;
+    border: 2px solid #ab8a52;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  #back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  #back-to-top:hover {
+    background: #ab8a52;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <span class="site-title">給付付き税額控除研究会</span>
+  <span class="home-link"><a href="#top">トップ</a></span>
+</header>
+
+<nav class="tab-nav" id="top">
+  <a href="#info" class="active">お知らせ</a>
+  <a href="#background">研究会について</a>
+  <a href="#organizers">主催</a>
+</nav>
+
+<div class="page-wrap">
+
+  <main>
+    <h1 class="page-heading">お知らせ</h1>
+
+    <section class="anchor-section" id="info">
+      <div class="content-box">
+        <div class="box-header">次回研究会のご案内</div>
+        <div class="box-body">
+
+          <p class="event-title">第１回研究会・開催案内</p>
+
+          <div class="field">
+            <span class="diamond">◆</span><span class="field-label">日程</span>　2026年7月9日（木）夕方18：00〜20：00
+          </div>
+
+          <div class="field">
+            <span class="diamond">◆</span><span class="field-label">報告者</span>　三木義一　先生（本学名誉教授、弁護士）
+          </div>
+
+          <div class="field">
+            <span class="diamond">◆</span><span class="field-label">テーマ</span>　「民主党政権時の給付付き税額控除導入の議論の背景（仮）」
+          </div>
+
+          <div class="field">
+            <span class="diamond">◆</span><span class="field-label">会場</span>　青山学院大学17号館10Fディスカッションルーム
+            <div class="sub">※オンライン（Zoom等）との同時開催を予定しております。後日、招待URLを登録メールアドレス宛にご送付いたします。</div>
+          </div>
+
+          <div class="field">
+            <span class="diamond">◆</span><span class="field-label">参加方法</span>
+            <div class="sub">①（対面）青山学院大学17号館10Fディスカッションルームにて参加</div>
+            <div class="sub">②（オンライン）後日送付の招待URLより参加</div>
+            <div class="sub" style="margin-top:0.6rem;">出席のご回答とともに、①（対面）または②（オンライン）の何れかを明記の上、ご返信ください。</div>
+          </div>
+
+          <div class="field">
+            <span class="diamond">◆</span><span class="field-label">回答期限</span>　<span class="deadline">2026年7月2日（木）</span>まで
+          </div>
+
+          <div class="field">
+            <span class="diamond">◆</span><span class="field-label">その他</span>　研究会終了後、対面参加者には懇親会を予定しております。希望される方は、出欠もあわせてご記載ください。
+          </div>
+
+          <p class="note-asterisk">＊本研究会は事前のご案内をいただいた先生方を対象としております。</p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="anchor-section" id="background">
+      <div class="content-box background-box">
+        <div class="box-header">研究会について</div>
+        <div class="box-body">
+
+          <p>この度、主催陣により、「給付付き税額控除」研究会を開催することとなりました。</p>
+
+          <p>その第１回研究会として、三木義一名誉教授・弁護士による「民主党政権時の給付付き税額控除導入の議論の背景（仮）」のご講義を実施いたします。</p>
+
+          <p><strong>研究会開催の経緯</strong><br>
+          現在日本政府において、給付付き税額控除の導入が検討されている中で、その立法の際に、憲法上その他の法的根拠、所得税法上、この制度を導入する場合の適用要件や給与所得の場合の源泉税の問題等、これら以外にも検討すべき問題がありそうに思います。</p>
+
+          <blockquote>
+            そこで、税法務や公法の修了者やその他の関心のある実務家（税理士、会計士、弁護士先生等）や研究者も含めて給付付き税額控除の導入問題を検討すべきではないかと考えている次第です。<br><br>
+            今後、このような形で給付付き税額控除を所得税の中に導入する場合の主要な論点が、さらにいろいろな形でとりあげられるように思われます。この点、その制度に関する各国の制度紹介はありますが、わが国の所得税法にそれを導入する場合の論点についてはほとんど検討されていないように思われます。<br><br>
+            こうした状況から、まずは青学関係者等、親しい研究者や実務家等による研究会を開く必要があるのではないでしょうか。
+          </blockquote>
+
+          <p><strong>研究会の内容</strong><br>
+          義務的な研究会では決してなく、興味がある方々がお集まりになり、立法を視野に入れた給付付き税額控除の法的意義、法的問題点、実務的な設定、源泉徴収をどうとらえるか、など、幅広い議論ができる会にしたい、ということとなっております。その際、参加者による成果物の作成も視野に入れることも考えましょう（青学として研究会申請をして、青山ローレビュー等に掲載することも視野に入れるなど）、との話も出ています。ただし、あくまでも興味のある方の自由な議論や研究の場を設けようということが趣旨です。従いまして、お気楽なご参加で、お待ちしております。</p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="anchor-section" id="organizers">
+      <div class="content-box organizers-box">
+        <div class="box-header">主催</div>
+        <div class="box-body">
+          青山学院大学名誉教授<br>
+          米国税理士・青山学院大学大学院非常勤講師<br>
+          青山学院大学准教授・税理士
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <aside>
+    <div class="side-box">
+      <ul>
+        <li><a href="#info">次回研究会のご案内</a></li>
+        <li><a href="#background">研究会について</a></li>
+        <li><a href="#organizers">主催</a></li>
+      </ul>
+    </div>
+
+    <div class="side-highlight">
+      <strong>回答期限</strong>
+      2026年7月2日（木）までに、対面・オンラインの別を明記の上、ご返信ください。
+    </div>
+  </aside>
+
+</div>
+
+<footer>
+  Copyright (C) 2026 給付付き税額控除研究会 All Rights Reserved.
+</footer>
+
+<a href="#top" id="back-to-top" aria-label="トップへ戻る">↑</a>
+
+<script>
+  // スクロールが一定量を超えたら「トップへ戻る」ボタンを表示する
+  (function () {
+    var btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
